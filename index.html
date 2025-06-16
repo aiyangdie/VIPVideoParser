@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>视频解析网站</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>视频解析网站</h1>
+            <p>支持各大视频网站VIP视频解析</p>
+        </header>
+        
+        <div class="search-box">
+            <input type="text" id="videoUrl" placeholder="请输入需要解析的视频链接...">
+            <div class="button-group">
+                <button id="parseBtn">解析</button>
+                <button id="clearBtn">清除</button>
+            </div>
+        </div>
+        
+        <div class="parse-options">
+            <h3>解析线路</h3>
+            <div class="options-container">
+                <label class="option">
+                    <input type="radio" name="parseApi" value="https://jx.xmflv.cc/?url=" checked>
+                    <span>线路一 (xmflv)</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="parseApi" value="http://v9j.net/?url=">
+                    <span>线路二 (v9j)</span>
+                </label>
+            </div>
+        </div>
+        
+        <div class="result-container">
+            <div id="loadingIndicator" class="loading-indicator hidden">
+                <div class="spinner"></div>
+                <p>加载中...</p>
+            </div>
+            <div id="videoContainer" class="video-container hidden">
+                <iframe id="videoFrame" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h3>使用说明</h3>
+            <ol>
+                <li>复制您想要观看的视频网站链接</li>
+                <li>粘贴到上方输入框中</li>
+                <li>选择解析线路</li>
+                <li>点击"解析"按钮</li>
+                <li>如遇到解析失败，请尝试更换解析线路</li>
+            </ol>
+        </div>
+        
+        <div class="supported-sites">
+            <h3>支持的视频网站</h3>
+            <div class="sites-grid">
+                <div class="site">爱奇艺</div>
+                <div class="site">腾讯视频</div>
+                <div class="site">优酷</div>
+                <div class="site">芒果TV</div>
+                <div class="site">bilibili</div>
+                <div class="site">搜狐视频</div>
+                <div class="site">PPTV</div>
+                <div class="site">乐视视频</div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>免责声明：本站仅供学习交流使用，请勿用于商业用途。若有侵权，请联系删除。</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
